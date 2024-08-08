@@ -1,0 +1,324 @@
+.succ_button{background-color: #28a745;
+  color: white;}
+
+.location-bar{
+    background: white;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.current-location{
+    display:flex;
+    align-items:center;
+    gap:10px    
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  }
+  body{
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0.75)),url('/public/Images/cars.png');
+      background-repeat: no-repeat;
+      /* background-size: cover; */
+      background-position: center;
+      font-family: sans-serif;
+  }
+  nav{
+     background: black;
+     /* background: transparent; */
+     box-shadow:3px 3px 5px rgba(0,0,0,0.1);
+  }
+  
+  nav ul {
+      list-style: none;
+      display:flex;
+      width:100%;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      color:white
+  }
+  
+  nav ul li{
+      height: 50px;
+      
+      /* list-style: none;
+      display:inline-block;
+      margin:0 20px;
+      position: relative; */
+  }
+  
+  nav ul li a{
+      height:100%;
+      padding:0 30px;
+      display:flex;
+      text-decoration: none;
+      align-items: center;
+      text-transform: uppercase;
+      color:white;
+      
+      /* color:black */
+      
+  }
+  
+   nav a:hover{
+      background-color: gray;
+  } 
+  
+  /* First child mattum right a podum */
+  nav li:first-child{
+      margin-right: auto;
+  }
+  
+  .sidebar{
+      position:fixed;
+      top:0;
+      right:0;
+      height:100vh;
+      width:250px;
+      z-index:999;
+      background-color: rgba(255, 255, 255, 0.514);
+      box-shadow:-10px 0px 10px rgba(0,0,0,0.1); 
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+  
+  .sidebar li{
+      width:100%
+  }
+  
+  .sidebar a{
+      width:100%
+  }
+  
+  .menu_button{
+      display:none;
+  }
+  
+  @media(max-width: 768px) {
+      .hideonmobile{
+          display:none;
+      }
+      .menu_button{
+          display:block
+      }
+  }
+  
+  /* @media (min-width:800px) {
+      .hideonDesktop{
+          display:none
+      }
+  } */
+  
+  @media (max-width:425px) {
+      .sidebar{
+          width: 100%;
+      }
+  }
+  
+  .content{
+      width: 100%;
+      display: contents;
+      top: 50%;
+      /* content will be vertically centre so using translateY*/
+      transform: translateY(-50%); 
+      text-align: center;
+      color:white
+  }
+  
+  .content h1{
+      font-size: 50px;
+      margin-top: 80px;
+  }
+  
+  .content p{
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+  }
+  
+  .explorebutton{
+      width: 200px;
+      padding:15px 0;
+      text-align: center;
+      margin : 20px 10px;
+      /* border radius maker corner round */
+      font-weight: bold;
+      border: 2px solid #009688;
+      border-radius: 25px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+  }
+  span{
+      background: #009688;
+      height:100%;
+      width: 0;
+      border-radius: 25px;
+      position:absolute;
+      left:0;
+      bottom:0;
+      z-index: -1;
+      /* transition time edukum from left to right */
+      transition:0.5s;
+  }
+  
+  .explorebutton:hover span{
+      width: 100%;
+  }
+  
+  .explorebutton:hover{
+      border:none;
+  }
+
+  .tabbutton{
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin : 20px 10px;
+    /* border radius maker corner round */
+    font-weight: bold;
+    border: 2px solid #009688;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height:100%;
+    width: 0;
+    border-radius: 25px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index: -1;
+    /* transition time edukum from left to right */
+    transition:0.5s;
+}
+
+.tabbutton:hover span{
+    width: 100%;
+}
+
+.tabbutton:hover{
+    border:none;
+}
+.active{
+  background: #009688
+} 
+
+.mandatory{
+  color: red;
+}
+  .inputfields{
+      width: 300px;
+      padding:15px 0;
+      padding-left: 10px;
+      /* text-align: center; */
+      margin : 20px 5px;
+      /* border radius maker corner round */
+      /* border-radius: 25px; */
+      font-weight: bold;
+      border:2px solid #009688;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      
+  }
+  
+  .container{
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 10px;
+  
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+  }
+  
+  .footer-section {
+    width: 30%;
+  }
+  
+  .footer-section h3 {
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin: 10px 0;
+  }
+
+  .booking-form-section {
+    padding: 20px;
+  }
+  
+  /* .booking-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  } */
+  
+  /* .booking-tabs button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .booking-tabs button.active {
+    background-color: #ff4b4b;
+    color: #fff;
+  } */
+
+  .booking-tabs button.active {
+    background-color: #009688;
+    color: #fff;
+  } 
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 300px;
+  }
+  
+  /* .booking-form button {
+    padding: 10px 20px;
+    background-color: #ff4b4b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  } */
